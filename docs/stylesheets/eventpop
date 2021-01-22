@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Eventpop';
+  src: url("/fonts/eventpop/Eventpop-Medium-9b5a1d9b.eot");
+  src: url("/fonts/eventpop/Eventpop-Medium-9b5a1d9b.eot?#iefix") format("embedded-opentype"), url("/fonts/eventpop/Eventpop-Medium-d848fef3.woff2") format("woff2"), url("/fonts/eventpop/Eventpop-Medium-30b9877f.woff") format("woff"), url("/fonts/eventpop/Eventpop-Medium.ttf") format("truetype");
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Eventpop';
+  src: url("/fonts/eventpop/Eventpop-Medium-9b5a1d9b.eot");
+  src: url("/fonts/eventpop/Eventpop-Medium-9b5a1d9b.eot?#iefix") format("embedded-opentype"), url("/fonts/eventpop/Eventpop-Medium-d848fef3.woff2") format("woff2"), url("/fonts/eventpop/Eventpop-Medium-30b9877f.woff") format("woff"), url("/fonts/eventpop/Eventpop-Medium.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Eventpop';
+  src: url("/fonts/eventpop/Eventpop-Bold-a3d30386.eot");
+  src: url("/fonts/eventpop/Eventpop-Bold-a3d30386.eot?#iefix") format("embedded-opentype"), url("/fonts/eventpop/Eventpop-Bold-be9feeeb.woff2") format("woff2"), url("/fonts/eventpop/Eventpop-Bold-ea957e16.woff") format("woff"), url("/fonts/eventpop/Eventpop-Bold.ttf") format("truetype");
+  font-weight: 700; }

@@ -1,0 +1,14 @@
+/*!
+ * Font Awesome Pro 5.11.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("/fonts/font-awesome-5/fa-brands-400-43ce392b.eot");
+  src: url("/fonts/font-awesome-5/fa-brands-400-43ce392b.eot?#iefix") format("embedded-opentype"), url("/fonts/font-awesome-5/fa-brands-400-fdbf37fd.woff2") format("woff2"), url("/fonts/font-awesome-5/fa-brands-400-94aaf395.woff") format("woff"), url("/fonts/font-awesome-5/fa-brands-400-b73cccf2.ttf") format("truetype"), url("/fonts/font-awesome-5/fa-brands-400-7698b6b3.svg#fontawesome") format("svg"); }
+
+.fab {
+  font-family: 'Font Awesome 5 Brands'; }
