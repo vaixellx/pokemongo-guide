@@ -1,0 +1,82 @@
+---
+title: "Type Weakness"
+---
+
+<div class="container">
+  <h3 class="mb-4">ประเภทของโปเกมอน</h3>
+  <p class="mb-4">
+    โปเกมอนแต่ละชนิดจะมีประเภท (บางชนิดอาจะมีได้ถึง 2 ประเภท) การเลือกประเภทของโปเกมอน
+    และประเภทท่าโจมตีที่ชนะทางจะส่งผลให้สามารถชนะการต่อสู้ได้ง่ายยิ่งขึ้น
+  </p>
+
+  <div class="row">
+    <% data.type.each do |type, type_data| %>
+      <div class="col-12 col-lg-6">
+        <div class="card bg-light border-0 mb-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-4 text-center">
+                <%= image_tag "types/#{type}.png", class: "w-100 rounded-circle" %>
+                <div class="mt-1">
+                  <%= type.titleize %>
+                </div>
+              </div>
+
+              <div class="col-8">
+                <small class="text-success">
+                  <i class="mr-2 fas fa-laugh-beam"></i>
+                  ควรเลือก | Weak Against
+                </small>
+                <div class="mt-2 mb-2">
+                  <% if type_data.lost.present? %>
+                    <% type_data.lost.each do |type| %>
+                      <%= image_tag "types/#{type}.png",
+                            class: "rounded-circle win-type",
+                            style: "width: 13%;" %>
+                    <% end %>
+                  <% else %>
+                    <%= image_tag "https://via.placeholder.com/640/555558/?text=N/A",
+                            class: "rounded-circle lost-type",
+                            style: "width: 13%;" %>
+                  <% end %>
+                </div>
+
+
+                <small class="text-danger">
+                  <i class="mr-2 fas fa-frown"></i>
+                  ไม่ควรเลือก | Strong Against
+                </small>
+                <div class="mt-2 mb-2">
+                  <% if type_data.win.present? %>
+                    <% type_data.win.each do |type| %>
+                      <%= image_tag "types/#{type}.png",
+                            class: "rounded-circle lost-type",
+                            style: "width: 13%;" %>
+                    <% end %>
+                  <% else %>
+                    <%= image_tag "https://via.placeholder.com/640/555558/?text=N/A",
+                            class: "rounded-circle lost-type",
+                            style: "width: 13%;" %>
+                  <% end %>
+                </div>
+
+                <% if type_data.example.present? %>
+                  <small>
+                    <i class="mr-2 fas fa-cat"></i>
+                    โปเกมอนที่ต้องสู้ด้วยบ่อย
+                  </small>
+                  <div class="mt-1">
+                    <% type_data.example.each do |number| %>
+                      <%= image_tag pokemon_image_by_number(number),
+                            style: "width: 12%;" %>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

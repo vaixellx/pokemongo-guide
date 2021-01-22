@@ -1,0 +1,281 @@
+# pokemon number ref: https://pokemondb.net/type/dark
+bug:
+  win:
+    - dark
+    - grass
+    - psychic
+  lost:
+    - fire
+    - rock
+    - flying
+  example:
+    - "015" # beedrill
+    - "049" # venomoth
+    - "123" # scyther
+    - "127" # pinsir
+    - "212" # scizor
+    - "649" # genesect
+dark:
+  win:
+    - psychic
+    - ghost
+  lost:
+    - fighting
+    - fairy
+    - bug
+  example:
+    - "229" # houndoom
+    - "275" # shiftry
+    - "302" # sabeleye
+    - "319" # sharpedo
+    - "434" # stunky
+    - "435" # skuntank
+    - "248" # tyranitar
+dragon:
+  win:
+    - dragon
+  lost:
+    - ice
+    - dragon
+    - fairy
+  example:
+    - "147" # dratini
+    - "148" # dragonair
+    - "149" # dragonite
+    - "373" # salamence
+    - "330" # flygon
+electric:
+  win:
+    - flying
+    - water
+  lost:
+    - ground
+  example:
+    - "081" # magnemite
+    - "082" # magneton
+    - "125" # electabuzz
+    - "179" # flaffy
+    - "180" # ampharos
+    - "466" # electivire
+fairy:
+  win:
+    - dark
+    - dragon
+    - fairy
+  lost:
+    - poison
+    - steel
+  example:
+    - "040"
+    - "122"
+    - "280"
+    - "281"
+fighting:
+  win:
+    - dark
+    - ice
+    - normal
+    - rock
+    - steel
+  lost:
+    - psychic
+    - flying
+    - fairy
+  example:
+    - "062"
+    - "066"
+    - "067"
+    - "106"
+    - "107"
+    - "297"
+fire:
+  win:
+    - bug
+    - grass
+    - ice
+    - steel
+  lost:
+    - water
+    - ground
+    - rock
+  example:
+    - "037"
+    - "038"
+    - "229"
+    - "006"
+    - "058"
+    - "059"
+flying:
+  win:
+    - bug
+    - grass
+    - fighting
+  lost:
+    - electric
+    - ice
+    - rock
+  example:
+    - "227"
+    - "006"
+    - "123"
+    - "042"
+    - "149"
+    - "130"
+ghost:
+  win:
+    - ghost
+    - psychic
+  lost:
+    - ghost
+    - dark
+  example:
+    - "302"
+    - "353"
+    - "354"
+    - "355"
+    - "356"
+    - "477"
+    - "093"
+grass:
+  win:
+    - ground
+    - water
+    - rock
+  lost:
+    - poison
+    - fire
+    - bug
+    - flying
+    - ice
+  example:
+    - "187"
+    - "070"
+    - "044"
+    - "071"
+    - "275"
+    - "045"
+ground:
+  win:
+    - electric
+    - fire
+    - poison
+    - rock
+    - steel
+  lost:
+    - grass
+    - ice
+    - water
+  example:
+    - "028"
+    - "034"
+    - "031"
+    - "050"
+    - "207"
+    - "330"
+    - "464"
+ice:
+  win:
+    - dragon
+    - flying
+    - grass
+    - ground
+  lost:
+    - steel
+    - rock
+    - fire
+    - fighting
+  example:
+    - "091"
+    - "131"
+    - "459"
+    - "460"
+normal:
+  lost:
+    - fighting
+  example:
+    - "143"
+    - "474"
+    - "108"
+    - "216"
+    - "234"
+    - "233"
+poison:
+  win:
+    - fairy
+    - grass
+  lost:
+    - psychic
+    - ground
+  example:
+    - "023"
+    - "024"
+    - "042"
+    - "088"
+    - "434"
+    - "435"
+    - "109"
+psychic:
+  win:
+    - fighting
+    - poison
+  lost:
+    - ghost
+    - dark
+    - bug
+  example:
+    - "064"
+    - "079"
+    - "080"
+    - "096"
+    - "097"
+    - "280"
+    - "281"
+rock:
+  win:
+    - bug
+    - fire
+    - flying
+    - ice
+  lost:
+    - water
+    - steel
+    - ground
+    - grass
+    - fighting
+  example:
+    - "138"
+    - "142"
+    - "246"
+    - "247"
+    - "248"
+steel:
+  win:
+    - fairy
+    - rock
+    - ice
+  lost:
+    - ground
+    - fire
+    - fighting
+  example:
+    - "081"
+    - "082"
+    - "212"
+    - "227"
+    - "306"
+    - "376"
+water:
+  win:
+    - fire
+    - ground
+    - rock
+  lost:
+    - grass
+    - electric
+  example:
+    - "054"
+    - "090"
+    - "061"
+    - "055"
+    - "129"
+    - "062"

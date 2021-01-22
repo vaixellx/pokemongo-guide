@@ -1,0 +1,76 @@
+---
+title: "GO Rocket Boss Guide"
+---
+
+<div class="container">
+  <h3 class="mb-4">วิธีต่อสู้ GO Rocket Boss</h3>
+  <p class="mb-4">
+    GO Rocket Boss คือหัวหน้าของเหล่าวายร้าย (GO Rocket Grunt) ที่จะโผล่มาตาม PokéStop (ทำให้กลายเป็นสีดำ)
+    หรือบางครั้งก็จะนั่งบอลลูนสีดำมา โดยเหล่าหัวหน้าวายร้ายเหล่านี้จะโผล่ออกมาเมื่อเราสวมใส่ Rocket Radar อยู่เท่านั้น
+    ซึ่ง Rocket Radar จะได้รับเมื่อเรารวบรวม Mysterious Component ได้ครบ 6 ชิ้น
+    (ได้รับ 1 ชิ้นต่อการปราบ GO Rocket Grunt 1 ครั้ง, อ่านวิธีต่อสู้กับ GO Rocket Grunt ได้ <a href="/rocket-grunts-guide">ที่นี่</a>)
+  </p>
+
+  <p class="mb-4">
+    หัวหน้าวายร้ายมักจะใช้โปเกมอนที่ค่อนข้าวจะเก่งกว่าเหล่าวายร้ายทั่วไป ดังนั้นการรู้ว่าหัวหน้าวายร้ายเหล่านี้ใช้โปเกมอนชุดไหนและเลือกโปเกมอนที่ <b>"ชนะทาง"</b>
+    เข้าไปสู้จะทำให้ชนะได้อย่างง่ายดาย
+  </p>
+
+  <p class="mb-4">
+    โดยบทความนี้ได้รวบรวมข้อมูลของหัวหน้าและชุดโปเกมอน (ตัวใดตัวหนึ่งจากในลิสต์) และประเภทที่ควรเลือกเข้าไปสู้ไว้ให้แล้ว
+  </p>
+
+  <small class="text-warning">* ข้อมูลอัพเดทล่าสุดเดือน <b>ธันวาคม 2020</b></small>
+
+  <div class="mt-5">
+    <% data.boss.each do |boss_data| %>
+      <div class="row mb-3">
+        <div class="col-12 col-md-3 col-lg-2">
+          <%= image_tag "rocket-boss/#{boss_data.name.downcase}.jpg", class: 'w-100 rounded', style: "max-width: 200px" %>
+        </div>
+
+        <div class="col-12 col-md-9 col-lg-10">
+          <h2 class="text-info mt-3 mb-3">
+            <strong><%= boss_data.name %></strong>
+          </h2>
+
+          <div class="mb-3">
+            <strong class="text-success">ควรเลือก:</strong>
+            <% boss_data.recommended_type.each do |type| %>
+              <%= type_icon type, size: 32, css_class: 'win-type ml-2' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row mb-5">
+        <% 3.times.each do |i| %>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="mb-2">โปเกมอน <%= i + 1 %></div>
+            <div class="bg-light rounded mb-2">
+              <div class="row">
+                <% boss_data["pokemon_#{i+1}"].each do |pokemon| %>
+                  <div class="col-4">
+                    <div class="position-relative pb-2">
+                      <%= image_tag pokemon_image_by_number(pokemon.number), class: 'w-100' %>
+                      <% pokemon_data = data.pokemon[pokemon.number] %>
+
+                      <div class="mb-2 text-right pr-2 position-absolute" style="bottom: 0 ; right : 0">
+                        <% pokemon.lost.each do |type| %>
+                          <%= type_icon type, size: 20, css_class: 'win-type' %>
+                        <% end %>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="pb-5 pt-3"></div>
+    <% end %>
+  </div>
+</div>

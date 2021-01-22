@@ -1,0 +1,148 @@
+- name: "Sierra"
+  recommended_type:
+    - bug
+    - fighting
+    - rock
+    - electric
+    - dark
+  pokemon_1:
+    - number: "096"
+      lost:
+        - bug
+        - dark
+  pokemon_2:
+    - number: "103"
+      lost:
+        - bug
+    - number: "131"
+      lost:
+        - electric
+        - rock
+        - fighting
+    - number: "319"
+      lost:
+        - electric
+        - fighting
+  pokemon_3:
+    - number: "065"
+      lost:
+        - bug
+        - dark
+    - number: "229"
+      lost:
+        - rock
+        - fighting
+    - number: "275"
+      lost:
+        - bug
+        - fighting
+- name: "Arlo"
+  recommended_type:
+    - water
+    - rock
+    - ice
+    - electric
+    - grass
+    - fire
+  pokemon_1:
+    - number: "058"
+      lost:
+        - water
+        - rock
+  pokemon_2:
+    - number: "006"
+      lost:
+        - rock
+        - electric
+        - water
+    - number: "009"
+      lost:
+        - grass
+        - electric
+    - number: "208"
+      lost:
+        - grass
+        - water
+  pokemon_3:
+    - number: "149"
+      lost:
+        - ice
+        - electric
+        - rock
+    - number: "212"
+      lost:
+        - fire
+        - water
+    - number: "373"
+      lost:
+        - ice
+        - electric
+        - rock
+- name: "Cliff"
+  recommended_type:
+    - grass
+    - bug
+    - flying
+    - water
+    - ground
+    - fighting
+  pokemon_1:
+    - number: "138"
+      lost:
+        - grass
+  pokemon_2:
+    - number: "068"
+      lost:
+        - flying
+        - fairy
+        - psychic
+    - number: "095"
+      lost:
+        - water
+        - grass
+        - fighting
+    - number: "466"
+      lost:
+        - ground
+  pokemon_3:
+    - number: "248"
+      lost:
+        - fighting
+        - water
+        - bug
+    - number: "260"
+      lost:
+        - grass
+    - number: "389"
+      lost:
+        - bug
+        - flying
+- name: "Giovanni"
+  recommended_type:
+    - fighting
+    - ice
+    - dark
+    - ghost
+    - bug
+    - fairy
+  pokemon_1:
+    - number: "053"
+      lost:
+        - fighting
+  pokemon_2:
+    - number: "115"
+      lost:
+        - fighting
+    - number: "034"
+      lost:
+        - ice
+    - number: "445"
+      lost:
+        - ice
+        - fairy
+  pokemon_3:
+    - number: "150"
+      lost:
+        - ghost
+        - dark
+        - bug

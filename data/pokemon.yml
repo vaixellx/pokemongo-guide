@@ -1,0 +1,29 @@
+"029":
+  name: "Nidoran ♀"
+  types:
+    - poison
+"030":
+  name: "Nidorina"
+  types:
+    - poison
+"032":
+  name: "Nidoran ♂"
+  types:
+    - poison
+"033":
+  name: "Nidorino"
+  types:
+    - poison
+"042":
+  name: "Golbat"
+  types:
+    - poison
+    - flying
+"088":
+  name: "Grimer"
+  types:
+    - poison
+"089":
+  name: "Muk"
+  types:
+    - poison

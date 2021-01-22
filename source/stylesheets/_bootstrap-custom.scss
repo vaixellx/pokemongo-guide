@@ -1,0 +1,72 @@
+// Base Colors
+$gray-light: #b2b4b2;
+$gray: #7f8280;
+$gray-900: #000000;
+$black: #000000;
+$dark: #1d1d21;
+$white: #cccccf;
+$light: #444448;
+
+// Brand
+$primary: #539ddf;
+$success: #5ebe58;
+$secondary: #d7d9d8;
+$info: #75d0c1;
+$warning: #ffd700;
+$danger: #dc3e43;
+
+$text-muted: #88888a;
+
+// Base
+$font-size-base: 1rem;
+$border-radius: 0.5rem;
+$border-radius-sm: 0.25rem;
+$input-btn-padding-x: 1rem !default;
+$input-btn-padding-x-sm: 0.75rem !default;
+$input-btn-padding-x-lg: 1.75rem !default;
+
+// Button
+$btn-border-radius: 0.25rem;
+$btn-border-radius-lg: 2rem;
+$btn-border-radius-sm: 0.25rem;
+
+// Navbar
+$navbar-dark-toggler-border-color: transparent;
+$navbar-dark-color: rgba($white, 0.7);
+$navbar-dark-hover-color: $white;
+$navbar-dark-active-color: $primary;
+
+// Carousel
+$carousel-indicator-width: 10px !default;
+$carousel-indicator-height: 10px !default;
+$carousel-indicator-spacer: 5px !default;
+$carousel-indicator-active-bg: #74a535 !default;
+
+// Modal
+$modal-content-border-width: 0;
+$modal-header-border-width: 0;
+
+// Import default theme.
+@import "bootstrap";
+
+.carousel-indicators {
+  li {
+    border-radius: 50%;
+  }
+}
+
+.dropdown-toggle::after {
+  vertical-align: 0.1em;
+}
+
+.text-gray {
+  color: $gray;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.card {
+  overflow: hidden;
+}

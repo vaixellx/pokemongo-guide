@@ -1,0 +1,54 @@
+@import "bootstrap-custom";
+@import "font-awesome-5/fontawesome";
+@import "font-awesome-5/brands";
+@import "font-awesome-5/solid";
+@import "font-awesome-5/regular";
+@import "font-awesome-5/light";
+@import "font-awesome-5/duotone";
+@import "slick.css";
+@import "slick-theme.css";
+@import "eventpop";
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;700&display=swap");
+
+body {
+  background-color: #222225;
+  color: #cccccf;
+  font-family: "Kodchasan", system-ui;
+}
+
+.slick-custom-prev,
+.slick-custom-next {
+  cursor: pointer;
+  position: absolute;
+  font-size: 40px;
+  color: #fff;
+  opacity: 0.8;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  z-index: 1000;
+
+  &::before {
+    position: absolute;
+    margin-top: -20px;
+    top: 50%;
+  }
+}
+
+.slick-custom-prev {
+  left: 0;
+  padding-left: 15px;
+}
+
+.slick-custom-next {
+  right: 0;
+  padding-right: 15px;
+}
+
+.win-type {
+  border: 3px solid darken($success, 15%);
+}
+
+.lost-type {
+  border: 3px solid darken($danger, 15%);
+}

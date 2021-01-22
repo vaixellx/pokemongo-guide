@@ -1,0 +1,40 @@
+// Animated Icons
+// --------------------------
+
+.#{$fa-css-prefix}-spin {
+  animation: fa-spin 2s infinite linear;
+}
+
+.#{$fa-css-prefix}-pulse {
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.4, 0.4);
+    opacity: 0.0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  70% {
+    opacity: 0.8;
+  }
+
+  100% {
+    -webkit-transform: scale(1.1, 1.1);
+    opacity: 0.0;
+  }
+}
