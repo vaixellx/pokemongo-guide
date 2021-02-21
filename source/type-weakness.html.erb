@@ -22,8 +22,8 @@ title: "Type Weakness"
               </h3>
             </div>
 
-            <h5 class="text-danger">
-              <i class="mr-2 fas fa-minus-circle"></i>
+            <h5 class="text-danger ml-1">
+              <i class="mr-2 fas fa-frown"></i>
               แพ้ทาง
             </h5>
 
@@ -65,8 +65,8 @@ title: "Type Weakness"
               </div>
             </div>
 
-            <h5 class="text-success">
-              <i class="mr-2 fas fa-plus-circle"></i>
+            <h5 class="text-success ml-1">
+              <i class="mr-2 fas fa-laugh-beam"></i>
               ชนะทาง
             </h5>
 
@@ -109,12 +109,12 @@ title: "Type Weakness"
             </div>
 
             <% if type_data.example.present? %>
-              <h5>
+              <h5 class="text-info ml-1">
                 <i class="mr-2 fas fa-cat"></i>
                 ตัวอย่างโปเกมอน
               </h5>
 
-              <div class="alert alert-secondary">
+              <div class="alert alert-info">
                 <% type_data.example.each do |pokemon_name| %>
                   <% if pokemon = data.pokemon[pokemon_name] %>
                     <a href="<%= pokemon_url(pokemon.id) %>" target="_blank">

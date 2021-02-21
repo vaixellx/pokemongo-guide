@@ -4,6 +4,7 @@ module UiHelpers
   end
 
   def pokemon_go_image_by_number(number, thumb: false)
+    number = number.to_s.rjust(3, '0')
     if thumb
       "https://images.gameinfo.io/pokemon-trimmed/60/#{number}-00.webp"
     else
@@ -44,5 +45,24 @@ module UiHelpers
   end
 
   def types_weakness(types)
+    weak = types.flat_map { |type| data.type[type].def_weak }
+            .group_by(&:itself)
+            .sort_by { |_, entries| entries.length }
+            .reverse
+            .to_h
+            .keys
+    strong = types.flat_map { |type| data.type[type].def_strong }
+    weak - strong
+  end
+
+  def types_strong(types)
+    strong = types.flat_map { |type| data.type[type].def_strong }
+            .group_by(&:itself)
+            .sort_by { |_, entries| entries.length }
+            .reverse
+            .to_h
+            .keys
+    weak = types.flat_map { |type| data.type[type].def_weak }
+    strong - weak
   end
 end

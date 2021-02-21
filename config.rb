@@ -21,7 +21,7 @@ activate :relative_assets
 809.times.each do |number|
   proxy "/pokemons/#{number + 1}.html",
     "/pokemons/template.html",
-    locals: { id: number },
+    locals: { id: number + 1 },
     ignore: true
 end
 

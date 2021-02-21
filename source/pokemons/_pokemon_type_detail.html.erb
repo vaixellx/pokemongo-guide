@@ -1,0 +1,41 @@
+<div class="text-muted mb-4">
+  ประเภท :
+
+  <div class="mt-2">
+    <% types.each do |type| %>
+      <%= image_tag "types/#{type}.png",
+            class: "rounded-circle mr-1",
+            width: 32 %>
+    <% end %>
+  </div>
+</div>
+
+<div class="text-danger mb-4">
+  <h5 class="ml-1">
+    <i class="mr-2 fas fa-frown"></i>
+    แพ้ทาง (โดนโจมตีแรงขึ้น):
+  </h5>
+
+  <div class="alert alert-danger">
+    <% types_weakness(types).each do |type| %>
+      <%= image_tag "types/#{type}.png",
+            class: "rounded-circle mr-1",
+            width: 24 %>
+    <% end %>
+  </div>
+</div>
+
+<div class="text-success mb-4">
+  <h5 class="ml-1">
+    <i class="mr-2 fas fa-laugh-beam"></i>
+    ชนะทาง (โดนโจมตีเบาลง):
+  </h5>
+
+  <div class="alert alert-success">
+    <% types_strong(types).each do |type| %>
+      <%= image_tag "types/#{type}.png",
+            class: "rounded-circle mr-1",
+            width: 24 %>
+    <% end %>
+  </div>
+</div>

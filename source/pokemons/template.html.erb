@@ -1,17 +1,46 @@
-<% pokemon_name, pokemon = data.pokemon.to_a[id] %>
+<% data_index = id - 1 %>
+<% pokemon_name, pokemon = data.pokemon.to_a[data_index] %>
 <% content_for(:title) { pokemon_name } %>
 
 <div class="container">
+  <div class="mb-4">
+    <div class="row">
+      <div class="col-6">
+        <% if id > 1 %>
+          <% prev_pokemon_name = data.pokemon.to_a[data_index - 1][0] %>
+
+          <a class="text-muted" href="<%= pokemon_url(id - 1) %>">
+            <i class="fas fa-arrow-alt-to-left mr-2"></i>
+            <%= prev_pokemon_name %>
+            <%= image_tag pokemon_go_image_by_number(id - 1, thumb: true), width: 24  %>
+          </a>
+        <% end %>
+      </div>
+
+      <div class="col-6 text-right">
+        <% if data.pokemon.to_a[data_index + 1] %>
+          <% next_pokemon_name = data.pokemon.to_a[data_index + 1][0] %>
+
+          <a class="text-muted" href="<%= pokemon_url(id + 1) %>">
+            <%= image_tag pokemon_go_image_by_number(id + 1, thumb: true), width: 24  %>
+            <%= next_pokemon_name %>
+            <i class="fas fa-arrow-alt-to-right ml-2"></i>
+          </a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
   <h3 class="mb-4">
     <%= pokemon_name %>
     <span class="text-muted">
-      #<%= pokemon.id.to_s.rjust(3, '0') %>
+      #<%= id.to_s.rjust(3, '0') %>
     </span>
   </h3>
 
   <div class="row">
     <div class="text-center col-12 col-md-6 col-lg-5 col-xl-4">
-      <div class="card bg-dark border-0 mb-3">
+      <div class="card border-0 mb-3" style="background-color: <%= type_color(pokemon.types[0]) %>22">
         <div class="card-body">
           <%= image_tag pokemon_go_image_by_number(pokemon.id.to_s.rjust(3, '0')),
                 width: 256 %>
@@ -19,31 +48,8 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-6 col-lg-7 col-xl-8">
-      <div class="text-muted mb-4">
-        ประเภท :
-
-        <div class="mt-2">
-          <% pokemon.types.each do |type| %>
-            <%= image_tag "types/#{type}.png",
-                  class: "rounded-circle mr-1",
-                  width: 36 %>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="text-danger mb-4">
-        <i class="mr-2 fas fa-frown"></i>
-        ประเภทที่แพ้ทาง :
-
-        <div class="mt-2">
-          <% pokemon.types.each do |type| %>
-            <%= image_tag "types/#{type}.png",
-                  class: "rounded-circle mr-1",
-                  width: 36 %>
-          <% end %>
-        </div>
-      </div>
+    <div class="col-12 col-md-6 col-lg-7 col-xl-4">
+      <%= partial 'pokemons/pokemon_type_detail', locals: { types: pokemon.types } %>
     </div>
   </div>
 </div>
