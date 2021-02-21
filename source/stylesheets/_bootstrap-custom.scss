@@ -1,21 +1,18 @@
 // Base Colors
-$gray-light: #b2b4b2;
-$gray: #7f8280;
-$gray-900: #000000;
 $black: #000000;
-$dark: #1d1d21;
-$white: #cccccf;
-$light: #444448;
+$dark: #555555;
+$white: #ffffff;
+$light: #eeeeee;
 
 // Brand
-$primary: #539ddf;
-$success: #5ebe58;
-$secondary: #d7d9d8;
-$info: #75d0c1;
-$warning: #ffd700;
-$danger: #dc3e43;
+$primary: #e42a69;
+$success: #3eb84f;
+$secondary: #888;
+$info: #6cc3bb;
+$warning: #fdd12d;
+$danger: #e22b38;
 
-$text-muted: #88888a;
+$text-muted: #aaaaaa;
 
 // Base
 $font-size-base: 1rem;
@@ -31,20 +28,19 @@ $btn-border-radius-lg: 2rem;
 $btn-border-radius-sm: 0.25rem;
 
 // Navbar
-$navbar-dark-toggler-border-color: transparent;
-$navbar-dark-color: rgba($white, 0.7);
-$navbar-dark-hover-color: $white;
-$navbar-dark-active-color: $primary;
-
-// Carousel
-$carousel-indicator-width: 10px !default;
-$carousel-indicator-height: 10px !default;
-$carousel-indicator-spacer: 5px !default;
-$carousel-indicator-active-bg: #74a535 !default;
+$navbar-light-toggler-border-color: transparent;
+$navbar-light-color: rgba($dark, 0.7);
+$navbar-light-hover-color: $dark;
+$navbar-light-active-color: $primary;
 
 // Modal
 $modal-content-border-width: 0;
 $modal-header-border-width: 0;
+
+// Alert
+$alert-border-width: 0;
+$alert-bg-level: -11;
+
 
 // Import default theme.
 @import "bootstrap";
@@ -59,14 +55,14 @@ $modal-header-border-width: 0;
   vertical-align: 0.1em;
 }
 
-.text-gray {
-  color: $gray;
-}
-
 a:hover {
   text-decoration: none;
 }
 
 .card {
   overflow: hidden;
+
+  &.card-with-shadow {
+    box-shadow: 0 0 2rem #0002;
+  }
 }

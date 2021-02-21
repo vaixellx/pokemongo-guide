@@ -3,77 +3,131 @@ title: "Type Weakness"
 ---
 
 <div class="container">
-  <h3 class="mb-4">ประเภทของโปเกมอน</h3>
-  <p class="mb-4">
+  <h1 class="mb-4">ประเภทของโปเกมอน</h1>
+  <p class="mb-5">
     โปเกมอนแต่ละชนิดจะมีประเภท (บางชนิดอาจะมีได้ถึง 2 ประเภท) การเลือกประเภทของโปเกมอน
     และประเภทท่าโจมตีที่ชนะทางจะส่งผลให้สามารถชนะการต่อสู้ได้ง่ายยิ่งขึ้น
   </p>
 
   <div class="row">
     <% data.type.each do |type, type_data| %>
-      <div class="col-12 col-lg-6">
-        <div class="card bg-light border-0 mb-3">
+      <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+        <div class="card card-with-shadow border-0 mb-4">
           <div class="card-body">
-            <div class="row">
-              <div class="col-4 text-center">
-                <%= image_tag "types/#{type}.png", class: "w-100 rounded-circle" %>
-                <div class="mt-1">
-                  <%= type.titleize %>
-                </div>
+            <div class="mt-2 mb-4 text-center">
+              <%= image_tag "types/#{type}.png", width: 64, class: "rounded-circle" %>
+
+              <h3 class="d-inline-block ml-3" style="color: <%= type_color(type) %>">
+                <strong><%= type.titleize %></strong>
+              </h3>
+            </div>
+
+            <h5 class="text-danger">
+              <i class="mr-2 fas fa-minus-circle"></i>
+              แพ้ทาง
+            </h5>
+
+            <div class="alert alert-danger">
+              <small class="text-danger">
+                <i class="fas fa-shield-alt"></i>
+                โดนโจมตีแรงขึ้น
+              </small>
+
+              <div class="mt-1 mb-1">
+                <% if type_data.def_weak.present? %>
+                  <% type_data.def_weak.each do |type| %>
+                    <%= type_icon type, css_class: 'mb-1', size: 18 %>
+                  <% end %>
+                <% else %>
+                  <span class="text-muted">
+                    ไม่มี
+                  </span>
+                <% end %>
               </div>
 
-              <div class="col-8">
-                <small class="text-success">
-                  <i class="mr-2 fas fa-laugh-beam"></i>
-                  ควรเลือก | Weak Against
-                </small>
-                <div class="mt-2 mb-2">
-                  <% if type_data.lost.present? %>
-                    <% type_data.lost.each do |type| %>
-                      <%= image_tag "types/#{type}.png",
-                            class: "rounded-circle win-type",
-                            style: "width: 13%;" %>
-                    <% end %>
-                  <% else %>
-                    <%= image_tag "https://via.placeholder.com/640/555558/?text=N/A",
-                            class: "rounded-circle lost-type",
-                            style: "width: 13%;" %>
+              <hr>
+
+              <small class="text-danger">
+                <i class="fas fa-axe-battle"></i>
+                โจมตีเบาลง
+              </small>
+
+              <div class="mt-1 mb-2">
+                <% if type_data.atk_weak.present? %>
+                  <% type_data.atk_weak.each do |type| %>
+                    <%= type_icon type, css_class: 'mb-1', size: 18 %>
                   <% end %>
-                </div>
-
-
-                <small class="text-danger">
-                  <i class="mr-2 fas fa-frown"></i>
-                  ไม่ควรเลือก | Strong Against
-                </small>
-                <div class="mt-2 mb-2">
-                  <% if type_data.win.present? %>
-                    <% type_data.win.each do |type| %>
-                      <%= image_tag "types/#{type}.png",
-                            class: "rounded-circle lost-type",
-                            style: "width: 13%;" %>
-                    <% end %>
-                  <% else %>
-                    <%= image_tag "https://via.placeholder.com/640/555558/?text=N/A",
-                            class: "rounded-circle lost-type",
-                            style: "width: 13%;" %>
-                  <% end %>
-                </div>
-
-                <% if type_data.example.present? %>
-                  <small>
-                    <i class="mr-2 fas fa-cat"></i>
-                    โปเกมอนที่ต้องสู้ด้วยบ่อย
-                  </small>
-                  <div class="mt-1">
-                    <% type_data.example.each do |number| %>
-                      <%= image_tag pokemon_image_by_number(number),
-                            style: "width: 12%;" %>
-                    <% end %>
-                  </div>
+                <% else %>
+                  <span class="text-muted">
+                    ไม่มี
+                  </span>
                 <% end %>
               </div>
             </div>
+
+            <h5 class="text-success">
+              <i class="mr-2 fas fa-plus-circle"></i>
+              ชนะทาง
+            </h5>
+
+            <div class="alert alert-success">
+              <small class="text-success">
+                <i class="fas fa-axe-battle"></i>
+                โจมตีแรงขึ้น
+              </small>
+
+              <div class="mt-1 mb-1">
+                <% if type_data.atk_strong.present? %>
+                  <% type_data.atk_strong.each do |type| %>
+                    <%= type_icon type, css_class: 'mb-1', size: 18 %>
+                  <% end %>
+                <% else %>
+                  <span class="text-muted">
+                    ไม่มี
+                  </span>
+                <% end %>
+              </div>
+
+              <hr>
+
+              <small class="text-success">
+                <i class="fas fa-shield-alt"></i>
+                โดนโจมตีเบาลง
+              </small>
+
+              <div class="mt-1 mb-2">
+                <% if type_data.def_strong.present? %>
+                  <% type_data.def_strong.each do |type| %>
+                    <%= type_icon type, css_class: 'mb-1', size: 18 %>
+                  <% end %>
+                <% else %>
+                  <span class="text-muted">
+                    ไม่มี
+                  </span>
+                <% end %>
+              </div>
+            </div>
+
+            <% if type_data.example.present? %>
+              <h5>
+                <i class="mr-2 fas fa-cat"></i>
+                ตัวอย่างโปเกมอน
+              </h5>
+
+              <div class="alert alert-secondary">
+                <% type_data.example.each do |pokemon_name| %>
+                  <% if pokemon = data.pokemon[pokemon_name] %>
+                    <a href="<%= pokemon_url(pokemon.id) %>" target="_blank">
+                      <%= image_tag pokemon_go_image_by_number(pokemon.id.to_s.rjust(3, '0'), thumb: true),
+                            class: "mr-2",
+                            width: 24 %>
+                    </a>
+                  <% else %>
+                    <%= pokemon_name %>
+                  <% end %>
+                <% end %>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>

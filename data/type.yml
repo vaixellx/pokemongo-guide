@@ -1,281 +1,456 @@
-# pokemon number ref: https://pokemondb.net/type/dark
 bug:
-  win:
-    - dark
+  atk_strong:
     - grass
     - psychic
-  lost:
-    - fire
-    - rock
-    - flying
-  example:
-    - "015" # beedrill
-    - "049" # venomoth
-    - "123" # scyther
-    - "127" # pinsir
-    - "212" # scizor
-    - "649" # genesect
-dark:
-  win:
-    - psychic
-    - ghost
-  lost:
+    - dark
+  atk_weak:
     - fighting
+    - flying
+    - poison
+    - ghost
+    - steel
+    - fire
     - fairy
-    - bug
+  def_strong:
+    - fighting
+    - ground
+    - grass
+  def_weak:
+    - flying
+    - rock
+    - fire
   example:
-    - "229" # houndoom
-    - "275" # shiftry
-    - "302" # sabeleye
-    - "319" # sharpedo
-    - "434" # stunky
-    - "435" # skuntank
-    - "248" # tyranitar
+    - Venomoth
+    - Scyther
+    - Pinsir
+    - Scizor
+    - Genesect
+    - Beedrill
+dark:
+  atk_strong:
+    - ghost
+    - psychic
+  atk_weak:
+    - fighting
+    - dark
+    - fairy
+  def_strong:
+    - ghost
+    - psychic
+    - dark
+  def_weak:
+    - fighting
+    - bug
+    - fairy
+  example:
+    - Houndoom
+    - Shiftry
+    - Sableye
+    - Sharpedo
+    - Stunky
+    - Skuntank
+    - Tyranitar
 dragon:
-  win:
+  atk_strong:
     - dragon
-  lost:
+  atk_weak:
+    - steel
+    - fairy
+  def_strong:
+    - fire
+    - water
+    - grass
+    - electric
+  def_weak:
     - ice
     - dragon
     - fairy
   example:
-    - "147" # dratini
-    - "148" # dragonair
-    - "149" # dragonite
-    - "373" # salamence
-    - "330" # flygon
+    - Dratini
+    - Dragonair
+    - Dragonite
+    - Salamence
+    - Flygon
 electric:
-  win:
+  atk_strong:
     - flying
     - water
-  lost:
+  atk_weak:
+    - ground
+    - grass
+    - electric
+    - dragon
+  def_strong:
+    - flying
+    - steel
+    - electric
+  def_weak:
     - ground
   example:
-    - "081" # magnemite
-    - "082" # magneton
-    - "125" # electabuzz
-    - "179" # flaffy
-    - "180" # ampharos
-    - "466" # electivire
+    - Magnemite
+    - Magneton
+    - Electabuzz
+    - Flaaffy
+    - Ampharos
+    - Electivire
 fairy:
-  win:
-    - dark
+  atk_strong:
+    - fighting
     - dragon
-    - fairy
-  lost:
+    - dark
+  atk_weak:
+    - poison
+    - steel
+    - fire
+  def_strong:
+    - fighting
+    - bug
+    - dragon
+    - dark
+  def_weak:
     - poison
     - steel
   example:
-    - "040"
-    - "122"
-    - "280"
-    - "281"
+    - Mr. Mime
+    - Clefable
+    - Wigglytuff
+    - Ralts
+    - Kirlia
+    - Gardevoir
 fighting:
-  win:
-    - dark
-    - ice
+  atk_strong:
     - normal
     - rock
     - steel
-  lost:
-    - psychic
+    - ice
+    - dark
+  atk_weak:
     - flying
+    - poison
+    - psychic
+    - bug
+    - ghost
+    - fairy
+  def_strong:
+    - rock
+    - bug
+    - dark
+  def_weak:
+    - flying
+    - psychic
     - fairy
   example:
-    - "062"
-    - "066"
-    - "067"
-    - "106"
-    - "107"
-    - "297"
+    - Gallade
+    - Hariyama
+    - Hitmonlee
+    - Hitmonchan
+    - Machoke
 fire:
-  win:
+  atk_strong:
     - bug
-    - grass
-    - ice
     - steel
-  lost:
-    - water
-    - ground
-    - rock
-  example:
-    - "037"
-    - "038"
-    - "229"
-    - "006"
-    - "058"
-    - "059"
-flying:
-  win:
-    - bug
-    - grass
-    - fighting
-  lost:
-    - electric
-    - ice
-    - rock
-  example:
-    - "227"
-    - "006"
-    - "123"
-    - "042"
-    - "149"
-    - "130"
-ghost:
-  win:
-    - ghost
-    - psychic
-  lost:
-    - ghost
-    - dark
-  example:
-    - "302"
-    - "353"
-    - "354"
-    - "355"
-    - "356"
-    - "477"
-    - "093"
-grass:
-  win:
-    - ground
-    - water
-    - rock
-  lost:
-    - poison
-    - fire
-    - bug
-    - flying
-    - ice
-  example:
-    - "187"
-    - "070"
-    - "044"
-    - "071"
-    - "275"
-    - "045"
-ground:
-  win:
-    - electric
-    - fire
-    - poison
-    - rock
-    - steel
-  lost:
     - grass
     - ice
+  atk_weak:
+    - rock
+    - fire
     - water
-  example:
-    - "028"
-    - "034"
-    - "031"
-    - "050"
-    - "207"
-    - "330"
-    - "464"
-ice:
-  win:
     - dragon
-    - flying
-    - grass
-    - ground
-  lost:
+  def_strong:
+    - bug
     - steel
-    - rock
     - fire
-    - fighting
-  example:
-    - "091"
-    - "131"
-    - "459"
-    - "460"
-normal:
-  lost:
-    - fighting
-  example:
-    - "143"
-    - "474"
-    - "108"
-    - "216"
-    - "234"
-    - "233"
-poison:
-  win:
-    - fairy
     - grass
-  lost:
-    - psychic
+    - ice
+  def_weak:
     - ground
+    - rock
+    - water
   example:
-    - "023"
-    - "024"
-    - "042"
-    - "088"
-    - "434"
-    - "435"
-    - "109"
-psychic:
-  win:
+    - Vulpix
+    - Ninetales
+    - Growlithe
+    - Arcanine
+    - Houndoom
+    - Magmortar
+flying:
+  atk_strong:
+    - fighting
+    - bug
+    - grass
+  atk_weak:
+    - rock
+    - steel
+    - electric
+  def_strong:
+    - fighting
+    - ground
+    - bug
+    - grass
+  def_weak:
+    - rock
+    - electric
+    - ice
+  example:
+    - Aerodactyl
+    - Gyarados
+    - Scyther
+    - Dragonite
+    - Zapdos
+    - Articuno
+    - Moltres
+ghost:
+  atk_strong:
+    - ghost
+    - psychic
+  atk_weak:
+    - normal
+    - dark
+  def_strong:
+    - normal
     - fighting
     - poison
-  lost:
+    - bug
+  def_weak:
     - ghost
     - dark
-    - bug
   example:
-    - "064"
-    - "079"
-    - "080"
-    - "096"
-    - "097"
-    - "280"
-    - "281"
-rock:
-  win:
+    - Sableye
+    - Gengar
+    - Shuppet
+    - Banette
+    - Duskull
+    - Dusclops
+    - Dusknoir
+grass:
+  atk_strong:
+    - ground
+    - rock
+    - water
+  atk_weak:
+    - flying
+    - poison
+    - bug
+    - steel
+    - fire
+    - grass
+    - dragon
+  def_strong:
+    - ground
+    - water
+    - grass
+    - electric
+  def_weak:
+    - flying
+    - poison
     - bug
     - fire
-    - flying
     - ice
-  lost:
-    - water
+  example:
+    - Gloom
+    - Victreebel
+    - Exeggcute
+    - Exeggutor
+    - Shiftry
+    - Abomasnow
+ground:
+  atk_strong:
+    - poison
+    - rock
     - steel
+    - fire
+    - electric
+  atk_weak:
+    - flying
+    - bug
+    - grass
+  def_strong:
+    - poison
+    - rock
+    - electric
+  def_weak:
+    - water
+    - grass
+    - ice
+  example:
+    - Diglett
+    - Cubone
+    - Swinub
+    - Larvitar
+    - Rhyperior
+    - Onix
+ice:
+  atk_strong:
+    - flying
     - ground
     - grass
+    - dragon
+  atk_weak:
+    - steel
+    - fire
+    - water
+    - ice
+  def_strong:
+    - ice
+  def_weak:
+    - fighting
+    - rock
+    - steel
+    - fire
+  example:
+    - Abomasnow
+    - Articuno
+    - Lapras
+    - Cloyster
+    - Swinub
+    - Spheal
+normal:
+  atk_weak:
+    - rock
+    - ghost
+    - steel
+  def_strong:
+    - ghost
+  def_weak:
     - fighting
   example:
-    - "138"
-    - "142"
-    - "246"
-    - "247"
-    - "248"
-steel:
-  win:
+    - Snorlax
+    - Lickitung
+    - Blissey
+    - Chansey
+    - Slaking
+    - Stantler
+poison:
+  atk_strong:
+    - grass
     - fairy
+  atk_weak:
+    - poison
+    - ground
+    - rock
+    - ghost
+    - steel
+  def_strong:
+    - fighting
+    - poison
+    - grass
+    - fairy
+  def_weak:
+    - ground
+    - psychic
+  example:
+    - Ekans
+    - Golbat
+    - Stunky
+    - Skuntank
+    - Koffing
+    - Weezing
+psychic:
+  atk_strong:
+    - fighting
+    - poison
+  atk_weak:
+    - steel
+    - psychic
+    - dark
+  def_strong:
+    - fighting
+    - psychic
+  def_weak:
+    - bug
+    - ghost
+    - dark
+  example:
+    - Alakazam
+    - Slowpoke
+    - Drowzee
+    - Exeggcute
+    - Mewtwo
+    - Gardevoir
+    - Metagross
+rock:
+  atk_strong:
+    - flying
+    - bug
+    - fire
+    - ice
+  atk_weak:
+    - fighting
+    - ground
+    - steel
+  def_strong:
+    - normal
+    - flying
+    - poison
+    - fire
+  def_weak:
+    - fighting
+    - ground
+    - steel
+    - water
+    - grass
+  example:
+    - Aerodactyl
+    - Aron
+    - Aggron
+    - Larvitar
+    - Tyranitar
+    - Rhyperior
+    - Anorith
+steel:
+  atk_strong:
     - rock
     - ice
-  lost:
+    - fairy
+  atk_weak:
+    - steel
+    - fire
+    - water
+    - electric
+  def_strong:
+    - normal
+    - flying
+    - poison
+    - rock
+    - bug
+    - steel
+    - grass
+    - psychic
+    - ice
+    - dragon
+    - fairy
+  def_weak:
+    - fighting
     - ground
     - fire
-    - fighting
   example:
-    - "081"
-    - "082"
-    - "212"
-    - "227"
-    - "306"
-    - "376"
+    - Scizor
+    - Aron
+    - Aggron
+    - Magnemite
+    - Beldum
+    - Metagross
 water:
-  win:
-    - fire
+  atk_strong:
     - ground
     - rock
-  lost:
+    - fire
+  atk_weak:
+    - water
+    - grass
+    - dragon
+  def_strong:
+    - steel
+    - fire
+    - water
+    - ice
+  def_weak:
     - grass
     - electric
   example:
-    - "054"
-    - "090"
-    - "061"
-    - "055"
-    - "129"
-    - "062"
+    - Gyarados
+    - Slowpoke
+    - Poliwrath
+    - Carvanha
+    - Sharpedo
+    - Walrein

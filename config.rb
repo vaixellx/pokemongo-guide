@@ -18,19 +18,12 @@ page '/*.txt', layout: false
 activate :directory_indexes
 activate :relative_assets
 
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
-
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
-
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
+809.times.each do |number|
+  proxy "/pokemons/#{number + 1}.html",
+    "/pokemons/template.html",
+    locals: { id: number },
+    ignore: true
+end
 
 # Helpers
 require "lib/url_helpers"
