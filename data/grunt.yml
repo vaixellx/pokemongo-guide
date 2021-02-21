@@ -1,53 +1,54 @@
 - text: "Are you scared of psychics that use unseen power?"
   main_type: "psychic"
   recommended_type:
-    - dark
     - ghost
+    - dark
     - bug
   pokemon_1:
-    - "079"
-    - "063"
-    - "202"
+    - Exeggcute
+    - Wobbuffet
+    - Slowpoke
   pokemon_2:
-    - "096"
-    - "280"
-    - "097"
+    - Kadabra
+    - Drowzee
+    - Kirlia
   pokemon_3:
-    - "064"
-    - "281"
-    - "097"
+    - Kirlia
+    - Exeggutor
+    - Hypno
 - text: "Battle against my Flying-type Pokémon!"
   main_type: "flying"
   recommended_type:
     - ice
     - electric
   pokemon_1:
-    - "041"
-    - "042"
-    - "227"
+    - Golbat
+    - Skarmory
+    - Gligar
   pokemon_2:
-    - "042"
-    - "123"
-    - "169"
+    - Scyther
+    - Golbat
+    - Crobat
   pokemon_3:
-    - "149"
-    - "130"
-    - "169"
+    - Dragonite
+    - Crobat
+    - Gyarados
 - text: "Coiled and ready to strike!"
   main_type: "poison"
   recommended_type:
     - ground
     - psychic
   pokemon_1:
-    - "032"
-    - "029"
+    - Nidoran ♂
+    - Nidoran ♀
+    - Zubat
   pokemon_2:
-    - "042"
-    - "088"
-    - "089"
+    - Grimer
+    - Muk
   pokemon_3:
-    - "030"
-    - "033"
+    - Muk
+    - Nidorina
+    - Weezing
 - text: "Do you know how hot Pokemon fire breath can get?"
   main_type: "fire"
   recommended_type:
@@ -56,34 +57,36 @@
     - ground
     - rock
   pokemon_1:
-    - "037"
-    - "228"
+    - Vulpix
+    - Houndour
   pokemon_2:
-    - "038"
-    - "229"
+    - Ninetales
+    - Magmar
+    - Houndoom
   pokemon_3:
-    - "229"
-    - "005"
-    - "059"
+    - Ninetales
+    - Charmeleon
+    - Arcanine
 - text: "Don’t bother – I’ve already won. / Get ready to be defeated! / Winning is for winners."
   main_type:
     - normal
     - flying
     - water
   recommended_type:
-    - electric
     - fighting
+    - electric
     - ice
+    - steel
   pokemon_1:
-    - "142"
+    - Snorlax
   pokemon_2:
-    - "062"
-    - "143"
-    - "282"
+    - Gardevoir
+    - Snorlax
+    - Poliwrath
   pokemon_3:
-    - "130"
-    - "143"
-    - "149"
+    - Gyarados
+    - Snorlax
+    - Dragonite
 - text: "Don’t tangle with us!"
   main_type: "grass"
   recommended_type:
@@ -92,122 +95,126 @@
     - bug
     - ice
   pokemon_1:
-    - "187"
-    - "001"
+    - Lileep
+    - Hoppip
+    - Oddish
   pokemon_2:
-    - "002"
-    - "070"
-    - "044"
+    - Weepinbell
+    - Ivysaur
+    - Gloom
   pokemon_3:
-    - "071"
-    - "275"
-    - "045"
+    - Shiftry
+    - Victreebel
+    - Vileplume
 - text: "Get ready to be shocked!"
   main_type: "electric"
   recommended_type:
     - ground
   pokemon_1:
-    - "081"
-    - "125"
-    - "179"
+    - Magnemite
+    - Electabuzz
+    - Mareep
   pokemon_2:
-    - "082"
-    - "125"
-    - "180"
+    - Flaaffy
+    - Electabuzz
+    - Magneton
   pokemon_3:
-    - "125"
-    - "181"
+    - Electabuzz
+    - Ampharos
 - text: "Go, my super bug Pokémon!"
   main_type: "bug"
   recommended_type:
     - fire
     - flying
   pokemon_1:
-    - "048"
-    - "013"
-    - "213"
+    - Anorith
+    - Venonat
+    - Shuckle
   pokemon_2:
-    - "014"
-    - "049"
-    - "212"
+    - Pinsir
+    - Scizor
+    - Venomoth
   pokemon_3:
-    - "015"
-    - "123"
-    - "212"
+    - Beedrill
+    - Scyther
+    - Scizor
 - text: "Ke… ke… ke… ke… ke… ke…"
   main_type: "ghost"
   recommended_type:
     - dark
+    - ghost
+    - fairy
   pokemon_1:
-    - "302"
-    - "355"
-    - "353"
+    - Misdreavus
+    - Shuppet
+    - Duskull
   pokemon_2:
-    - "302"
-    - "354"
-    - "356"
+    - Banette
+    - Dusclops
   pokemon_3:
-    - "302"
-    - "354"
-    - "477"
+    - Dusknoir
+    - Banette
+    - Sableye
 - text: "Let’s rock and roll!"
   main_type: "rock"
   recommended_type:
     - fighting
-    - steel
+    - water
   pokemon_1:
-    - "246"
-    - "142"
+    - Aron
+    - Nosepass
   pokemon_2:
-    - "246"
-    - "247"
+    - Larvitar
+    - Pupitar
+    - Lairon
   pokemon_3:
-    - "247"
-    - "248"
+    - Pupitar
+    - Tyranitar
 - text: "Normal doesn’t mean weak."
   main_type: "normal"
   recommended_type:
     - fighting
     - psychic
   pokemon_1:
-    - "216"
+    - Teddiursa
   pokemon_2:
-    - "020"
-    - "233"
+    - Ratitude
+    - Porygon2
   pokemon_3:
-    - "474"
-    - "143"
+    - Snorlax
+    - Porygon-Z
 - text: "ROAR! … How’d that sound?"
   main_type: "dragon"
   recommended_type:
     - ice
     - electric
   pokemon_1:
-    - "147"
+    - Dratini
   pokemon_2:
-    - "148"
-    - "330"
+    - Dragonair
   pokemon_3:
-    - "148"
-    - "149"
-    - "130"
+    - Gyarados
+    - Dragonite
 - text: "These waters are treacherous"
   main_type: "water"
   recommended_type:
     - electric
     - grass
   pokemon_1:
-    - "054"
-    - "090"
-    - "129"
+    - Shellder
+    - Poliwag
+    - Wooper
+    - Magikarp
   pokemon_2:
-    - "061"
-    - "055"
-    - "129"
+    - Golduck
+    - Poliwhirl
+    - Marshtomp
+    - Magikarp
   pokemon_3:
-    - "062"
-    - "186"
-    - "130"
+    - Politoed
+    - Poliwrath
+    - Magikarp
+    - Gyarados
 - text: "This buff physique isn’t just for show!"
   main_type: "fighting"
   recommended_type:
@@ -215,41 +222,44 @@
     - flying
     - fairy
   pokemon_1:
-    - "066"
-    - "106"
+    - Hitmonlee
+    - Hitmonchan
+    - Machop*
   pokemon_2:
-    - "106"
+    - Machoke
   pokemon_3:
-    - "067"
+    - Machoke
+    - Hitmonlee
 - text: "Wherever there is light, there is also shadow."
   main_type: "dark"
   recommended_type:
-    - ground
+    - fairy
     - fighting
     - bug
   pokemon_1:
-    - "434"
+    - Sableye
+    - Stunky
   pokemon_2:
-    - "435"
-    - "302"
+    - Skuntank
+    - Nuzleaf
   pokemon_3:
-    - "435"
-    - "275"
+    - Shiftry
+    - Cacturne
 - text: "You’ll be defeated into the ground!"
   main_type: "ground"
   recommended_type:
     - ice
     - water
   pokemon_1:
-    - "050"
-    - "207"
+    - Swinub
+    - Diglett
   pokemon_2:
-    - "105"
-    - "247"
-    - "329"
+    - Vibrava
+    - Pupitar
+    - Marowak
   pokemon_3:
-    - "472"
-    - "330"
+    - Gliscor
+    - Flygon
 - text: "You’re gonna be frozen in your tracks."
   main_type: "ice"
   recommended_type:
@@ -258,11 +268,13 @@
     - electric
     - fire
   pokemon_1:
-    - "459"
-    - "091"
+    - Spheal
+    - Snover
   pokemon_2:
-    - "459"
-    - "460"
+    - Sealeo
+    - Cloyster
+    - Swinub
   pokemon_3:
-    - "131"
-    - "460"
+    - Abomasnow
+    - Lapras
+    - Cloyster

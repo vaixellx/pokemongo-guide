@@ -24,7 +24,7 @@ title: "GO Rocket Grunts Guide"
     โดยบทความนี้ได้รวบรวมประโยคที่เหล่าวายร้ายใช้คู่กับชุดโปเกมอน (ตัวใดตัวหนึ่งจากในลิสต์) และประเภทที่ควรเลือกเข้าไปสู้ไว้ให้แล้ว
   </p>
 
-  <small class="text-warning">* ข้อมูลอัพเดทล่าสุดเดือน <b>ธันวาคม 2020</b></small>
+  <small class="text-info">* ข้อมูลอัพเดทล่าสุดเดือน <%= data.article.battle_guides[1].updated_at %></small>
 
   <div class="mt-5">
     <% data.grunt.each do |grunt_data| %>
@@ -59,10 +59,16 @@ title: "GO Rocket Grunts Guide"
             <div class="mb-2"><strong>โปเกมอน #<%= i + 1 %></strong></div>
             <div class="alert alert-info mb-2">
               <div class="row">
-                <% grunt_data["pokemon_#{i+1}"].each do |number| %>
+                <% grunt_data["pokemon_#{i+1}"].each do |pokemon_name| %>
+                  <% pokemon = data.pokemon[pokemon_name] %>
                   <div class="col-4">
-                    <%= image_tag pokemon_image_by_number(number), class: 'w-100' %>
-                    <% pokemon_data = data.pokemon[number] %>
+                    <% if pokemon %>
+                      <a href="<%= pokemon_url(pokemon.id) %>" target="_blank">
+                        <%= image_tag pokemon_go_image_by_number(pokemon.id, thumb: true), width: 60 %>
+                      </a>
+                    <% else %>
+                      <%= pokemon_name %>
+                    <% end %>
                   </div>
                 <% end %>
               </div>
