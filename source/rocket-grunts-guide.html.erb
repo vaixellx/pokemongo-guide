@@ -3,10 +3,10 @@ title: "GO Rocket Grunts Guide"
 ---
 
 <div class="container">
-  <h3 class="mb-4">
+  <h1 class="mb-4">
     <i class="fas fa-axe-battle mr-2"></i>
     วิธีต่อสู้ GO Rocket Grunts
-  </h3>
+  </h1>
 
   <p class="mb-4">
     GO Rocket Grunts คือเหล่าวายร้ายที่จะโผล่มาตาม PokéStop (ทำให้กลายเป็นสีดำ)
@@ -35,25 +35,29 @@ title: "GO Rocket Grunts Guide"
 
       <div class="mb-3">
         ประเภท:
-        <% if grunt_data.main_type.is_a? Array %>
-          <% grunt_data.main_type.each do |type| %>
-            <%= type_icon type, size: 26, css_class: 'ml-2' %>
+        <div class="alert alert-secondary d-inline-block ml-2">
+          <% if grunt_data.main_type.is_a? Array %>
+            <% grunt_data.main_type.each do |type| %>
+              <%= type_icon type, size: 24, css_class: 'mr-1' %>
+            <% end %>
+          <% else %>
+            <%= type_icon grunt_data.main_type, size: 24, css_class: 'mr-1' %>
           <% end %>
-        <% else %>
-          <%= type_icon grunt_data.main_type, size: 26, css_class: 'ml-2' %>
-        <% end %>
+        </div>
 
         <strong class="ml-4 text-success">ควรเลือก:</strong>
-        <% grunt_data.recommended_type.each do |type| %>
-          <%= type_icon type, size: 32, css_class: 'win-type ml-2' %>
-        <% end %>
+        <div class="alert alert-success d-inline-block ml-2">
+          <% grunt_data.recommended_type.each do |type| %>
+            <%= type_icon type, size: 24, css_class: 'mr-1' %>
+          <% end %>
+        </div>
       </div>
 
       <div class="row mb-5">
         <% 3.times.each do |i| %>
           <div class="col-12 col-md-6 col-lg-4">
-            <div class="mb-2">โปเกมอน <%= i + 1 %></div>
-            <div class="bg-light rounded mb-2">
+            <div class="mb-2"><strong>โปเกมอน #<%= i + 1 %></strong></div>
+            <div class="alert alert-info mb-2">
               <div class="row">
                 <% grunt_data["pokemon_#{i+1}"].each do |number| %>
                   <div class="col-4">

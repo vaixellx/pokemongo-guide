@@ -11,7 +11,7 @@ title: "All Guides"
   <div class="row">
     <% data.article.battle_guides.each do |article| %>
       <div class="col-12 col-md-6 col-xl-4">
-        <a href="/type-weakness">
+        <a href="<%= article.url %>">
           <div class="card card-with-shadow border-0 bg-white mb-3">
             <%= image_tag article.cover, class: 'w-100', style: 'opacity: 0.9' %>
             <div class="card-body">

@@ -1,0 +1,9 @@
+<% pokemon_name, pokemon = data.pokemon.to_a[id - 1] %>
+
+<div class="pokemon-popover"
+      data-toggle="popover"
+      data-placement="auto"
+      data-content='<h4><%= pokemon_name %> #<%= pokemon.id %></h4><%= partial "pokemons/pokemon_type_detail", locals: { types: pokemon.types } %>'
+      data-html="true">
+  <%= image_tag pokemon_go_image_by_number(id, thumb: true), width: 60 %>
+</div>

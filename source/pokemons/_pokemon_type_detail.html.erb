@@ -13,13 +13,13 @@
 <div class="text-danger mb-4">
   <h5 class="ml-1">
     <i class="mr-2 fas fa-frown"></i>
-    แพ้ทาง (โดนโจมตีแรงขึ้น):
+    แพ้ทาง:
   </h5>
 
   <div class="alert alert-danger">
     <% types_weakness(types).each do |type| %>
       <%= image_tag "types/#{type}.png",
-            class: "rounded-circle mr-1",
+            class: "rounded-circle mr-1 mb-1",
             width: 24 %>
     <% end %>
   </div>
@@ -28,13 +28,13 @@
 <div class="text-success mb-4">
   <h5 class="ml-1">
     <i class="mr-2 fas fa-laugh-beam"></i>
-    ชนะทาง (โดนโจมตีเบาลง):
+    ชนะทาง:
   </h5>
 
   <div class="alert alert-success">
     <% types_strong(types).each do |type| %>
       <%= image_tag "types/#{type}.png",
-            class: "rounded-circle mr-1",
+            class: "rounded-circle mr-1 mb-1",
             width: 24 %>
     <% end %>
   </div>
